@@ -1,8 +1,8 @@
-import React from "react"
+// import React from "react"
 
-function Search(props) {
-    return <h1>Search</h1>
+// function Search(props) {
+//     return <h1>Search</h1>
    
-  }
+//   }
   
-  export default Search;
+//   export default Search;

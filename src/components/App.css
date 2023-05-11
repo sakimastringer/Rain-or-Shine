@@ -1,0 +1,28 @@
+/* .bcard {
+
+} */
+
+.input {
+    padding: 8px;
+    margin: auto;
+    width: 25%;
+    border-radius: 8px;
+    text-align: center;
+   
+
+}
+
+.footer {
+    color: black;
+    position: fixed;
+    left:0;
+    bottom:0;
+    right:0;
+}
+
+.card {
+    width: 350px;
+    height: 400px;
+    margin: auto;
+    flex-direction: column;
+}
