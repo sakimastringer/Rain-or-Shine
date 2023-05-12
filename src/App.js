@@ -20,25 +20,37 @@ import Search from "./pages/Search";
 import WeatherForm from "./components/WeatherForm";
 
 export default function App() {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q={cityname}&units=imperial&appid=d9a6ec56c078b6f44d3a8201102b6fb5`
+  const [city, setCity] = useState("")
+  // const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d9a6ec56c078b6f44d3a8201102b6fb5`
   const [weatherData, setWeatherData] = useState({})
   const [data, setData] = useState({})
-  const [cityName, setCityName] = useState("")
+  
 
-  //get weather data
-  const getWeather = (onSubmit) =>{
-    if (onSubmit.url == "input") {
-      //fecth data from URL
-      fetch(url).then(
-        //import response into projects.json
-        response => response.json()
-      ).then(
-        data => {
-          setWeatherData(data)
-        }
-      )
-    } 
-  }
+  // //get weather data
+  // const getWeather = () => {
+    
+  
+  //   axios.get(url)
+  //     .then(response => {
+  //       setWeatherData(response.data);
+  //     })
+  //     .catch(error => {
+  //       console.error("Error fetching weather data:", error);
+  //     });
+  // };
+  // const getWeather = (onSubmit) =>{
+  //   if (onSubmit.url == "input") {
+  //     //fecth data from URL
+  //     fetch(url).then(
+  //       //import response into projects.json
+  //       response => response.json()
+  //     ).then(
+  //       data => {
+  //         setWeatherData(data)
+  //       }
+  //     )
+  //   } 
+  // }
 
 
   return (
@@ -62,12 +74,12 @@ export default function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           {/* <Route path="/search" element={<Search URL={URL} />} /> */}
-          <Route path="/results" element={<Results URL={URL} />} />
+          <Route path="/results" element={<Results />} />
         </Routes>
         <Footer />
       </div>
       <div>
-        {/* <WeatherForm cityName={cityName} setCityName={setCityName} getWeather={getWeather}/> */}
+        <WeatherForm city={city} setCity={setCity} />
       </div>
     </div>
     </BrowserRouter>

@@ -1,25 +1,29 @@
 import React from "react"
+import axios from 'axios';
 import { useState, useEffect } from "react";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 
 export default function Results(props) {
     
-    // const [params] = useSearchParams();
-    // const searchQuery = params.get("query");
-    // const [exampleResults, setExampleResults] = useState("Yolo");
-    // params => custome variable to return params object
-    // params object several methods -> get (return a search for a key )
+    const [params] = useSearchParams();
+    const searchQuery = params.get("query");
+    const [weatherData, setWeatherData] = useState({})
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchQuery}&appid=d9a6ec56c078b6f44d3a8201102b6fb5&units=imperial`
+    // get weather data
+  const getWeather = () => {
+    
   
-    // console.log("params object", params);
-    // console.log("location", searchQuery);
-  
-    /**  setting results state,*/
-  
-    /**  useEffect for handling API query ,etc ,*/
-  
-    /**  loading / loaded and conditional JSX below ,*/
-  
+    axios.get(url)
+      .then(response => {
+        setWeatherData(response.data);
+      })
+      .catch(error => {
+        console.error("Error fetching weather data:", error);
+      });
+  };
+  useEffect(()=>{getWeather()},[])
+  console.log(weatherData)
     return (
         
       <div>
