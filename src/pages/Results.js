@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 
-
+const {REACT_APP_APPID} = process.env
 export default function Results(props) {
     
     const [params] = useSearchParams();
