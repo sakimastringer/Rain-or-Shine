@@ -1,0 +1,63 @@
+// import React from "react";
+// import { useState } from "react";
+// import './App.css';
+// import Card from 'react-bootstrap/Card';
+// import { Navigate, useNavigate } from "react-router";
+
+// export default function WeatherForm({ cityName, setCityName, getWeather }) {
+//     let [searchInput, setSearchInput] = useState("");
+//     let handleChange = (e) => {
+//         e.preventDefault();
+//         setSearchInput(e.target.value);
+//     };
+//     if (searchInput == { cityName }) {
+//         cityName.filter((cityName => {
+//             return cityName.name.match(searchInput);
+//         }))
+//     }
+//     let loaded = () => (<>
+//         <form onChange={handleChange}>
+//             <div>
+//                 <input
+//                     type="search"
+//                     placeholder="Enter city here"
+//                     onChange={handleChange}
+//                     value={cityName} />
+//                 <table>
+//                     <th>City</th>
+//                 </table>
+
+//             </div>
+//         </form>
+//     </>)
+//         <Card className = "bcard" >
+//     <Card.Img variant="top" src="https://i.imgur.com/bdU4sds.jpg" />
+//     <Card.Body>
+//         <Card.Text>
+//             {/* <p>Date</p>
+//                         <p>Temp</p>
+//                         <p>Description</p>
+//                         <p>Humidity</p>
+//                         <p>Wind</p>
+//                         <p>Feels Like</p>
+//                         <p>Rain</p> */}
+//         </Card.Text>
+//     </Card.Body>
+//     </Card >
+
+
+// }
+
+
+//     // const [exampleResults, setExampleResults] = useState("Yolo");
+//     // params => custome variable to return params object
+//     // params object several methods -> get (return a search for a key )
+  
+//     // console.log("params object", params);
+//     // console.log("location", searchQuery);
+  
+//     /**  setting results state,*/
+  
+//     /**  useEffect for handling API query ,etc ,*/
+  
+//     /**  loading / loaded and conditional JSX below ,*/
