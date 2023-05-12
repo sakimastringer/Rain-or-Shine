@@ -21,7 +21,7 @@ import WeatherForm from "./components/WeatherForm";
 
 export default function App() {
   const [city, setCity] = useState("")
-  // const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d9a6ec56c078b6f44d3a8201102b6fb5`
+ 
   const [weatherData, setWeatherData] = useState({})
   const [data, setData] = useState({})
   

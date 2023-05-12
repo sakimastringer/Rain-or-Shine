@@ -9,7 +9,7 @@ export default function Results(props) {
     const [params] = useSearchParams();
     const searchQuery = params.get("query");
     const [weatherData, setWeatherData] = useState({})
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchQuery}&appid=d9a6ec56c078b6f44d3a8201102b6fb5&units=imperial`
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchQuery}&appid=${REACT_APP_APPID}&units=imperial`
     // get weather data
   const getWeather = () => {
     
