@@ -21,7 +21,7 @@ export default function WeatherForm({city, setCity, setWeatherData}) {
       
       <>
       <form onSubmit={handleSubmit}>
-        <p>Search Label</p>
+        {/* <p>Search Label</p> */}
         <input
           id="userInput"
           onChange={(e) => setInput(e.target.value)}
