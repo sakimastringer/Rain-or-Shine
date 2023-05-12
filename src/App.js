@@ -26,12 +26,12 @@ export default function App() {
   const [cityName, setCityName] = useState("")
 
   //get weather data
-  const getWeather = (event) =>{
-    if (event.url == "input") {
+  const getWeather = (onSubmit) =>{
+    if (onSubmit.url == "input") {
       //fecth data from URL
       fetch(url).then(
         //import response into projects.json
-        projects => projects.json()
+        response => response.json()
       ).then(
         data => {
           setWeatherData(data)
@@ -67,7 +67,7 @@ export default function App() {
         <Footer />
       </div>
       <div>
-        <WeatherForm cityName={cityName} setCityName={setCityName} getWeather={getWeather}/>
+        {/* <WeatherForm cityName={cityName} setCityName={setCityName} getWeather={getWeather}/> */}
       </div>
     </div>
     </BrowserRouter>
