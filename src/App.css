@@ -4,3 +4,27 @@
   padding: 0;
   font-family: sans-serif;
 }
+
+.container {
+  /* background-image: linear-gradient(to bottom, #0209ff, #005eff, #0086ff, #00a6ff, #00c1f9, #00cdf2, #18d8e8, #4ce1db, #00e2c9, #00e2af, #00e08e, hsl(140, 72%, 52%)); */
+  color: whitesmoke;
+}
+/* .search {
+  
+} */
+
+.App {
+  background-image: url("./images/Cancun.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.con{
+  background-color: rgb(89, 154, 210);
+  color: aliceblue;
+  font-weight: bold;
+}
+

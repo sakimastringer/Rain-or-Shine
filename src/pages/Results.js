@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import axios from 'axios';
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
@@ -17,21 +17,23 @@ export default function Results(props) {
     axios.get(url)
       .then(response => {
         setWeatherData(response.data);
+        console.log(response.data)
       })
       .catch(error => {
         console.error("Error fetching weather data:", error);
       });
+      
   };
   useEffect(()=>{getWeather()},[])
   console.log(weatherData)
     return (
         
       <div>
-        <h1>Results</h1>
-        {/* <h1>Results for {searchQuery}</h1> */}
+        {/* <h1>Results</h1> */}
+        <h1>City Weather Data for <br /> {searchQuery}</h1>
   
-        {/* <Link to={`/detail/${exampleResults}`}>{exampleResults}</Link> */}
-        <br />
+        {/* <Link to={`/detail/${exampleResults}`}>{exampleResults}</Link>
+        <br /> */}
         {/* <Link to="/">Search for more info</Link> */}
       </div>
     );

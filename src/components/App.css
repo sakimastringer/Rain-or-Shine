@@ -3,21 +3,30 @@
 } */
 
 .input {
-    padding: 8px;
+    padding: 1px;
     margin: auto;
-    width: 25%;
-    border-radius: 8px;
+    width: 12%;
+    border-radius: 10px;
+    border-width: 3px;
     text-align: center;
+    font-weight: bold;
+    color: aliceblue;
+    background-color: transparent;
+
    
 
 }
 
 .footer {
+    text-align: right;
     color: black;
     position: fixed;
     left:0;
     bottom:0;
     right:0;
+}
+.temp {
+    color: aliceblue;
 }
 
 .card {
@@ -25,4 +34,44 @@
     height: 400px;
     margin: auto;
     flex-direction: column;
+}
+
+.search {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    padding: 5px;
+    color: aliceblue;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.box {
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border-color: black;
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 200px;
+    padding: 15px;
+    gap: 8px;
+    transition: transform 0.8s;
+    text-align: center;
+}
+
+.box:hover {
+    transform: scale(1.2);
+}
+
+.description {
+    color: aliceblue;
 }

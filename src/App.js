@@ -25,6 +25,7 @@ export default function App() {
   const [weatherData, setWeatherData] = useState({})
   const [data, setData] = useState({})
   
+  
 
   // //get weather data
   // const getWeather = () => {
@@ -54,18 +55,22 @@ export default function App() {
 
 
   return (
+    
     <BrowserRouter>
     <div className="App">
       <>
+    
 
         <Navbar bg="light" variant="light">
-          <Container>
+          <Container className="con">
+          
             <Navbar.Brand href="#home">Weather or Not</Navbar.Brand>
-            <Nav className="me-auto">
+            <Nav className="auto">
               <Nav.Link as={Link} to="/">Home</Nav.Link>
               {/* <Nav.Link as={Link} to="/search">Search</Nav.Link> */}
               <Nav.Link as={Link} to="/results">Results</Nav.Link>
             </Nav>
+            
           </Container>
         </Navbar>
       </>
@@ -79,8 +84,10 @@ export default function App() {
         <Footer />
       </div>
       <div>
+      
         <WeatherForm city={city} setCity={setCity} />
       </div>
+      
     </div>
     </BrowserRouter>
   );
