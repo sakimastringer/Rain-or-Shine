@@ -4,8 +4,10 @@ import './App.css';
 import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import { Navigate, useNavigate } from "react-router";
+import { data, weatherData, getWeather } from '../pages/Results.js';
 
-export default function WeatherForm({city, setCity, setWeatherData}) {
+
+export default function WeatherForm({ weatherData }) {
     const [input, setInput] = useState("");
     const navigate = useNavigate();
   
@@ -16,7 +18,7 @@ export default function WeatherForm({city, setCity, setWeatherData}) {
       setInput("");
     };
 
-
+    console.log(weatherData)
     return (
       
       <>
@@ -31,32 +33,6 @@ export default function WeatherForm({city, setCity, setWeatherData}) {
         />
         <input className="input" type="submit" value="Search" />
       </form>
-      
-    <div className="description">
-      <h1>Partly Cloudy</h1>
-
-    </div>
-    <div className="temp">
-      <h1>70°F</h1>
-    </div>
-    <div className="container">
-    <div className="box">
-        <p>High/Low</p>
-        <h2>72°F/62°F</h2>
-      </div>
-      <div className="box">
-        <p>Feels Like</p>
-        <h2>72°F</h2>
-      </div>
-      <div className="box">
-        <p>Humidity</p>
-        <h2>89%</h2>
-      </div>
-      <div className="box">
-        <p>Wind</p>
-        <h2>18 mph</h2>
-      </div>
-    </div>
       </>
   )
 }

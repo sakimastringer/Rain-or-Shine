@@ -78,3 +78,8 @@
           </Card.Text>
       </Card.Body>
       </Card> */}
+
+
+      {/* <Link to={`/detail/${exampleResults}`}>{exampleResults}</Link>
+        <br /> */}
+        {/* <Link to="/">Search for more info</Link> */}

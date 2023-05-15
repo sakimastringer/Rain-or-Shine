@@ -16,7 +16,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // Import Pages
 import Home from "./pages/Home";
 import Results from "./pages/Results";
-import Search from "./pages/Search";
 import WeatherForm from "./components/WeatherForm";
 
 export default function App() {
@@ -65,9 +64,8 @@ export default function App() {
           <Container className="con">
           
             <Navbar.Brand href="#home">Weather or Not</Navbar.Brand>
-            <Nav className="auto">
+            <Nav className="meauto">
               <Nav.Link as={Link} to="/">Home</Nav.Link>
-              {/* <Nav.Link as={Link} to="/search">Search</Nav.Link> */}
               <Nav.Link as={Link} to="/results">Results</Nav.Link>
             </Nav>
             
