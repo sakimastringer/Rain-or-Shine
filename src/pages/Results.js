@@ -29,8 +29,8 @@ export default function Results(props) {
       
   };
   useEffect(()=>{getWeather()},[])
-  
-  
+
+
     return (
         
       <div>
@@ -38,7 +38,7 @@ export default function Results(props) {
         <h1>City Weather Data for <br /> {searchQuery}</h1>
         <WeatherResults weatherData={weatherData}/>
   
-        
+
       </div>
     );
   }
