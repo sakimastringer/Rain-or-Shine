@@ -19,8 +19,10 @@ Wire Frame: https://lucid.app/lucidchart/d5cb8f25-fa90-4f7d-921d-e93e0611b71b/ed
 
 Screenshots:
 ![Home Page](https://github.com/sakimastringer/Rain-or-Shine/assets/120221564/a7fa1a47-c647-44f1-a17a-3f84ed8083b8)
-
+![Home Page1](https://github.com/sakimastringer/Rain-or-Shine/assets/120221564/8d9a05aa-d643-4502-943d-1c4d8bef4f24)
 ![Results Page](https://github.com/sakimastringer/Rain-or-Shine/assets/120221564/cd614296-727d-4e26-a799-a11fb46072f4)
+![Results Page1](https://github.com/sakimastringer/Rain-or-Shine/assets/120221564/482b6a9a-448a-4e31-9b9b-5b871596e905)
+
 
 Tech used: React JS, CSS, Node.js, Bootstrap, GitHub, Netlify
 
