@@ -1,8 +1,12 @@
-import React from "react"
+import React from "react";
 import axios from 'axios';
+import '../App.css';
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
+import WeatherResults from "../components/WeatherResults";
+// import WeatherForm from "../components/WeatherForm";
 
+// console.log(process.env.REACT_APP_APPID)
 // const {REACT_APP_APPID} = process.env
 export default function Results(props) {
     
@@ -17,33 +21,24 @@ export default function Results(props) {
     axios.get(url)
       .then(response => {
         setWeatherData(response.data);
+        
       })
       .catch(error => {
         console.error("Error fetching weather data:", error);
       });
+      
   };
   useEffect(()=>{getWeather()},[])
-  // console.log(weatherData)
-  console.log(process.env.REACT_APP_APPID)
+
+
     return (
         
       <div>
         {/* <h1>Results</h1> */}
-        <h1>Results for {searchQuery}</h1>
-      {/* <div className="Data">
-        <p>{weatherData.city}</p>
-        <p>{weatherData.main.temp}</p>
-        <p>{weatherData.weather.description}</p>
-        <p>{weatherData.weather.icon}</p>
-        <p>{weatherData.main.humidity}</p>
-        <p>{weatherData}</p>
-        
+        <h1>City Weather Data for <br /> {searchQuery}</h1>
+        <WeatherResults weatherData={weatherData}/>
+  
 
-
-      </div>
-         {/* <Link to={`/results/${exampleResults}`}>{exampleResults}</Link>
-        <br /> */}
-        {/* <Link to="/">Search for more info</Link>  */} 
       </div>
     );
   }
